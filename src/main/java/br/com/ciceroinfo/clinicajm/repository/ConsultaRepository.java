@@ -28,12 +28,12 @@ public class ConsultaRepository {
 	}
 
 	@Transactional
-	public void recuperaConsulta(Integer id) {
-		entityManager.find(Consulta.class, id);
+	public Consulta recuperaConsulta(Integer id) {
+		return entityManager.find(Consulta.class, id);
 	}
 
 	@SuppressWarnings("unchecked")
-	public List<Consulta> listarPorPaciente(Integer idPaciente) {
+	public List<Consulta> listaPorPaciente(Integer idPaciente) {
 		Query query = entityManager
 				.createQuery("SELECT c FROM Consulta c WHERE c.paciente.id = :idPaciente order by c.dataConsulta");
 		
