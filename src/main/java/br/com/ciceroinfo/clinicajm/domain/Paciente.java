@@ -1,28 +1,28 @@
 package br.com.ciceroinfo.clinicajm.domain;
 
 import java.io.Serializable;
+import java.util.Date;
 
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
+import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import br.com.ciceroinfo.clinicajm.domain.enumeration.Especialidade;
+import org.springframework.format.annotation.DateTimeFormat;
 
-@Entity
-public class Medico implements Serializable {
+public class Paciente implements Serializable {
 
-	private static final long serialVersionUID = -6908255942300709316L;
+	private static final long serialVersionUID = 2444611725602092880L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
+
 	private String nome;
 
-	@Enumerated(EnumType.STRING)
-	private Especialidade especialidade;
+	@Column(name = "data_nascimento")
+	@DateTimeFormat(pattern = "dd/MM/yyyy")
+	private Date dataNascimento;
 
 	public Integer getId() {
 		return id;
@@ -40,12 +40,12 @@ public class Medico implements Serializable {
 		this.nome = nome;
 	}
 
-	public Especialidade getEspecialidade() {
-		return especialidade;
+	public Date getDataNascimento() {
+		return dataNascimento;
 	}
 
-	public void setEspecialidade(Especialidade especialidade) {
-		this.especialidade = especialidade;
+	public void setDataNascimento(Date dataNascimento) {
+		this.dataNascimento = dataNascimento;
 	}
 
 	@Override
@@ -64,7 +64,7 @@ public class Medico implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Medico other = (Medico) obj;
+		Paciente other = (Paciente) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
@@ -72,4 +72,5 @@ public class Medico implements Serializable {
 			return false;
 		return true;
 	}
+
 }
