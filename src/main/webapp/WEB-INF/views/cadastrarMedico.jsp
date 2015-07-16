@@ -9,10 +9,33 @@
 <html>
 <tiles:insertDefinition name="template">
 	<tiles:putAttribute name="corpo">
-	
-	
-	<h1>Cadastrar Médico</h1>
 
+
+		<h1>Cadastrar Médico</h1>
+
+		<springform:form method="post"
+			action="${pageContext.request.contextPath}/medico/cadastro.do"
+			modelAttribute="medico">
+			<div style="width: 300px">
+				<div class="form-group">
+					<label for="nome">Nome:</label>
+					<springform:input id="nome" path="nome" cssClass="form-control" />
+				</div>
+
+				<div class="form-group">
+					<label for="nome">Especialidade:</label>
+					<springform:select path="especialidade" cssClass="form-control">
+						<option value="">selecione</option>
+						<c:forEach items="${especialidades}" var="e">
+							<option value="${e }">${e.descricao}</option>
+						</c:forEach>
+					</springform:select>
+				</div>
+			</div>
+			
+			<input type="submit" value="Gravar" class="btn btn-primary" />
+			
+		</springform:form>
 
 	</tiles:putAttribute>
 </tiles:insertDefinition>
