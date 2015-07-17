@@ -6,7 +6,7 @@
 <tiles:insertDefinition name="template">
 	<tiles:putAttribute name="corpo">
 		<p align="center">Escolha sua opção logo acima</p>
-		<h1 align="center">Página não encontrada</h1>
+		<h1 align="center">Erro no servidor</h1>
 		<img src="${pageContext.request.contextPath}/images/404.jpg" alt="Page Not Found (404)."
 			style="position: absolute; left: 50%; top: 50%; margin-left: -285px; margin-top: -190px;">
 	</tiles:putAttribute>

@@ -14,7 +14,7 @@
 		<h1>Cadastrar Médico</h1>
 
 		<springform:form method="post"
-			action="${pageContext.request.contextPath}/medico/cadastro.do"
+			action="${pageContext.request.contextPath}/medico/cadastrar.do"
 			modelAttribute="medico">
 			<div style="width: 300px">
 				<div class="form-group">

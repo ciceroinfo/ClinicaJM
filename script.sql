@@ -19,3 +19,7 @@ CREATE TABLE consulta (
 	data_consulta TIMESTAMP NOT NULL,
 	data_atendimento TIMESTAMP NOT NULL
 );
+
+select * from medico;
+select * from paciente;
+select * from consulta;
