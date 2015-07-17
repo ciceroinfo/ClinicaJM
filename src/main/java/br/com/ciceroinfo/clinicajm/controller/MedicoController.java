@@ -46,9 +46,9 @@ public class MedicoController {
 	}
 
 	@RequestMapping(value = "/excluir.do", method = RequestMethod.GET)
-	public String excluir(Integer id, Model model) {
+	public String excluir(Integer idMedico, Model model) {
 
-		medicoRepository.excluiMedico(id);
+		medicoRepository.excluiMedico(idMedico);
 
 		model.addAttribute("mensagem", new Mensagem(
 				"Sucesso ao excluir o médico", TipoMensagem.SUCESSO));
