@@ -30,7 +30,7 @@ public class NavegacaoController {
 	@RequestMapping(value = "/preparaCadastroPaciente.do")
 	public String redirecionaCadastroPaciente(Map<String, Object> map) {
 
-		map.put("medico", new Paciente());
+		map.put("paciente", new Paciente());
 
 		return "cadastrarPaciente";
 	}
