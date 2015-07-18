@@ -21,7 +21,7 @@
 				
 				if($("#especialidade").val()!='') {
 					
-					$ajax({
+					$.ajax({
 						type:"get",
 						url:"${pageContext.request.contextPath}/medico/listarPorEspecialidade.do",
 						data:'especialidade='+ $("#especialidade").val(),
@@ -52,7 +52,7 @@
 				
 				<div class="form-group">
 					<label for="medico">Médico:</label>
-					<springform:select id="medico" path="${medico.id}">
+					<springform:select id="medico" path="${medico.id}" cssClass="form-control">
 						<option value="">selecione</option>
 					</springform:select>
 				</div>

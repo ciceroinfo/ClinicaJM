@@ -38,8 +38,9 @@ public class NavegacaoController {
 	@RequestMapping(value = "/preparaCadastroConsulta.do")
 	public String redirecionaCadastroConsulta(Map<String, Object> map) {
 
+		map.put("especialidades", Especialidade.values());
 		map.put("pacientes", pacienteRepository.listaPacientes());
-		map.put("medico", new Consulta());
+		map.put("consulta", new Consulta());
 
 		return "cadastrarConsulta";
 	}
