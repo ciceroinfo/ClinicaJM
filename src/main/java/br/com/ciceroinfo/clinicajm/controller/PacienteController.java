@@ -50,7 +50,7 @@ public class PacienteController {
 		model.addAttribute("mensagem", new Mensagem(
 				"Sucesso ao excluir o médico", TipoMensagem.SUCESSO));
 
-		return "foward:/paciente/listar.do";
+		return "forward:/paciente/listar.do";
 	}
 
 }

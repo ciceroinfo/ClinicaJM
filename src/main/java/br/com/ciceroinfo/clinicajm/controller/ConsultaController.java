@@ -49,7 +49,7 @@ public class ConsultaController {
 							TipoMensagem.ERRO));
 		}
 
-		return "foward:/preparaCadastroConsulta.do";
+		return "forward:/preparaCadastroConsulta.do";
 	}
 
 	@RequestMapping(value = "/detalharConsulta.do", method = RequestMethod.GET)
@@ -71,7 +71,7 @@ public class ConsultaController {
 		model.addAttribute("mensagem", new Mensagem(
 				"Sucesso ao cadastrar o atendimento", TipoMensagem.SUCESSO));
 
-		return "foward:/preparaCadastroAtendimento.do";
+		return "forward:/preparaCadastroAtendimento.do";
 	}
 
 	@RequestMapping(value = "/listarPorPaciente.do", method = RequestMethod.POST)

@@ -53,7 +53,7 @@ public class MedicoController {
 		model.addAttribute("mensagem", new Mensagem(
 				"Sucesso ao excluir o médico", TipoMensagem.SUCESSO));
 
-		return "foward:/medico/listar.do";
+		return "forward:/medico/listar.do";
 	}
 
 	@RequestMapping(value = "/listarPorEspecialidade.do", method = RequestMethod.GET)
