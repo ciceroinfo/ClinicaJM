@@ -49,7 +49,36 @@
 						</c:forEach>
 					</select>
 				</div>
+				
+				<div class="form-group">
+					<label for="medico">Médico:</label>
+					<springform:select id="medico" path="${medico.id}">
+						<option value="">selecione</option>
+					</springform:select>
+				</div>
+				
+				<div class="form-group">
+					<label for="paciente">Paciente:</label>
+					<select id="paciente" class="form-control">
+						<option value="">selecione</option>
+						<c:forEach items="${pacientes}" var="p">
+							<option value="${p.id}">${p.nome}</option>
+						</c:forEach>
+					</select>
+				</div>
+				
+				<div class="form-group">
+					<label for="data">Data (DD/MM/AAAA):</label>
+					<input id="data" type="text" name="data" maxlength="10" class="form-control" />
+				</div>
+				
+				<div class="form-group">
+					<label for="hora">Hora (HH:MM):</label>
+					<input id="hora" type="text" name="hora" maxlength="5" class="form-control" />
+				</div>
 			</div>
+			
+			<input type="submit" value="Gravar" class="btn btn-primary" />
 		</springform:form>
 
 	</tiles:putAttribute>
