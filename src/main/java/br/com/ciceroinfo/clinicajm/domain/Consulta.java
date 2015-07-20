@@ -78,6 +78,14 @@ public class Consulta implements Serializable {
 	public void setMedico(Medico medico) {
 		this.medico = medico;
 	}
+	
+	public Paciente getPaciente() {
+		return paciente;
+	}
+	
+	public void setPaciente(Paciente paciente) {
+		this.paciente = paciente;
+	}
 
 	public Date getDataConsulta() {
 		return dataConsulta;
@@ -118,6 +126,14 @@ public class Consulta implements Serializable {
 		} else if (!id.equals(other.id))
 			return false;
 		return true;
+	}
+	
+	@Override
+	public String toString() {
+		return "Consulta{id=" + id + ", medico=" + medico + ", paciente="
+				+ paciente + ", dataConsulta=" + dataConsulta
+				+ ", dataAtendimento=" + dataAtendimento + ", sintomas="
+				+ sintomas + ", receita=" + receita + "}";
 	}
 
 }

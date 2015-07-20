@@ -10,14 +10,15 @@ CREATE TABLE paciente (
 	data_nascimento DATE NOT NULL
 );
 
+DROP TABLE consulta;
 CREATE TABLE consulta (
 	id INT AUTO_INCREMENT PRIMARY KEY,
 	id_medico INT NOT NULL,
 	id_paciente INT NOT NULL,
-	sintomas VARCHAR(255) NOT NULL,
-	receita VARCHAR(255) NOT NULL,
+	sintomas VARCHAR(255) NULL,
+	receita VARCHAR(255) NULL,
 	data_consulta TIMESTAMP NOT NULL,
-	data_atendimento TIMESTAMP NOT NULL
+	data_atendimento TIMESTAMP NULL
 );
 
 select * from medico;

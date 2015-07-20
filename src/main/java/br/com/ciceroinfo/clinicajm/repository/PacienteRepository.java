@@ -19,6 +19,7 @@ public class PacienteRepository {
 
 	@Transactional
 	public void salvaPaciente(Paciente paciente) {
+		System.out.println("Gravando paciente: " + paciente);
 		entityManager.merge(paciente);
 	}
 

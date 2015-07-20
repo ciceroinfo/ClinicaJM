@@ -20,11 +20,13 @@ public class MedicoRepository {
 
 	@Transactional
 	public void salvaMedico(Medico medico) {
+		System.out.println("Gravando medico: " + medico);
 		entityManager.merge(medico);
 	}
 
 	@Transactional
 	public void excluiMedico(Integer id) {
+		System.out.println("Excluindo medico com id: " + id);
 		Medico medico = entityManager.find(Medico.class, id);
 		entityManager.remove(medico);
 	}

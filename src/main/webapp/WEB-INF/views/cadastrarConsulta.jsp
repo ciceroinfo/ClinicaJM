@@ -38,46 +38,51 @@
 			}
 		</script>
 
-		<springform:form method="post" action="${pageContext.request.contextPath}/consulta/agendar.do" modelAttribute="consulta">
+		<springform:form method="post"
+			action="${pageContext.request.contextPath}/consulta/agendar.do"
+			modelAttribute="consulta">
 			<div style="width: 300px;">
 				<div class="form-group">
-					<label for="especialidade">Especialidade:</label>
-					<select id="especialidade" onchange="carregaMedicosDaEspecialidade();" class="form-control">
+					<label for="especialidade">Especialidade:</label> <select
+						id="especialidade" onchange="carregaMedicosDaEspecialidade();"
+						class="form-control">
 						<option value="">selecione</option>
 						<c:forEach items="${especialidades}" var="e">
 							<option value="${e}">${e.descricao}</option>
 						</c:forEach>
 					</select>
 				</div>
-				
+
 				<div class="form-group">
 					<label for="medico">Médico:</label>
-					<springform:select id="medico" path="${medico.id}" cssClass="form-control">
+					<springform:select id="medico" path="medico.id"
+						cssClass="form-control">
 						<option value="">selecione</option>
 					</springform:select>
 				</div>
-				
+
 				<div class="form-group">
 					<label for="paciente">Paciente:</label>
-					<select id="paciente" class="form-control">
+					<springform:select id="paciente" path="paciente.id"
+						cssClass="form-control">
 						<option value="">selecione</option>
 						<c:forEach items="${pacientes}" var="p">
 							<option value="${p.id}">${p.nome}</option>
 						</c:forEach>
-					</select>
+					</springform:select>
 				</div>
-				
+
 				<div class="form-group">
 					<label for="data">Data (DD/MM/AAAA):</label>
 					<input id="data" type="text" name="data" maxlength="10" class="form-control" />
 				</div>
-				
+
 				<div class="form-group">
-					<label for="hora">Hora (HH:MM):</label>
-					<input id="hora" type="text" name="hora" maxlength="5" class="form-control" />
+					<label for="hora">Hora (HH:MM):</label> <input id="hora"
+						type="text" name="hora" maxlength="5" class="form-control" />
 				</div>
 			</div>
-			
+
 			<input type="submit" value="Gravar" class="btn btn-primary" />
 		</springform:form>
 

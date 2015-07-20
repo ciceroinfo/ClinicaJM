@@ -19,11 +19,13 @@ public class ConsultaRepository {
 
 	@Transactional
 	public void salvaConsulta(Consulta consulta) {
+		System.out.println("Gravando consulta: " + consulta);
 		entityManager.merge(consulta);
 	}
 
 	@Transactional
 	public void atualizaConsulta(Consulta consulta) {
+		System.out.println("Atualizando consulta: " + consulta);
 		entityManager.merge(consulta);
 	}
 

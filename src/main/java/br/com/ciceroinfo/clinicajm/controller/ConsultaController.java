@@ -27,6 +27,9 @@ public class ConsultaController {
 	@RequestMapping(value = "/agendar.do", method = RequestMethod.POST)
 	public String agendar(Consulta consulta, String data, String hora,
 			Model model) {
+		
+		System.out.println("Agendar consulta: " + consulta + ", data=" + data
+				+ ", hora=" + hora);
 
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
 
@@ -36,7 +39,7 @@ public class ConsultaController {
 
 		try {
 
-			dataConsulta = sdf.parse(data + "" + hora);
+			dataConsulta = sdf.parse(data + " " + hora);
 
 			consulta.setDataConsulta(dataConsulta);
 			consultaRepository.salvaConsulta(consulta);
