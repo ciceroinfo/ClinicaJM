@@ -76,8 +76,9 @@
 				
 				return (dia < 10 ? '0' + dia:dia)  
 				+ '/' + (mes < 10 ? '0' + mes:mes) 
-				+ '/' + (hora < 10 ? '0' + hora:hora) 
-				+ '/' + (minuto < 10 ? '0' + minuto:minuto);
+				+ '/' + d.getFullYear()
+				+ ' ' + (hora < 10 ? '0' + hora:hora) 
+				+ ':' + (minuto < 10 ? '0' + minuto:minuto);
 			}
 		</script>
 		

@@ -79,7 +79,7 @@ public class ConsultaController {
 		return "forward:/preparaCadastroAtendimento.do";
 	}
 
-	@RequestMapping(value = "/listarPorPaciente.do", method = RequestMethod.POST)
+	@RequestMapping(value = "/listarPorPaciente.do", method = RequestMethod.GET)
 	public @ResponseBody List<Consulta> listarPorPaciente(Integer idPaciente) {
 		
 		System.out.println("listarPorPaciente idPaciente:" + idPaciente);
