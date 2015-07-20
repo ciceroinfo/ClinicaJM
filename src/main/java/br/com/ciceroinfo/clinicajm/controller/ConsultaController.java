@@ -61,6 +61,8 @@ public class ConsultaController {
 		System.out.println("detalhar idConsulta:" + idConsulta);
 
 		Consulta consulta = consultaRepository.recuperaConsulta(idConsulta);
+		
+		System.out.println("detalhar retorno consulta:" + consulta);
 
 		model.addAttribute("consulta", consulta);
 
@@ -70,6 +72,8 @@ public class ConsultaController {
 	@RequestMapping(value = "/atender.do", method = RequestMethod.POST)
 	public String gravarAtendimento(Consulta consulta, Model model) {
 
+		System.out.println("gravarAtendimento consulta:" + consulta);
+		
 		consulta.setDataAtendimento(new Date());
 		consultaRepository.atualizaConsulta(consulta);
 
