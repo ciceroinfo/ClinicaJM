@@ -55,7 +55,7 @@
 			
 			<springform:hidden path="id"/>
 			<springform:hidden path="dataConsulta"/>
-			<springform:hidden path="medido.id"/>
+			<springform:hidden path="medico.id"/>
 			<springform:hidden path="paciente.id"/>
 
 		</springform:form>
