@@ -41,7 +41,13 @@ public class ConsultaRepository {
 		
 		query.setParameter("idPaciente", idPaciente);
 
-		return query.getResultList();
+		List<Consulta> consultas = query.getResultList();
+		 
+		for (Consulta consulta : consultas) {
+			System.out.println("Consuta: " + consulta);
+		}
+		 
+		return consultas;
 	}
 
 }

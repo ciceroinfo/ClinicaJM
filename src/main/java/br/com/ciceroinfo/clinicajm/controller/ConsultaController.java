@@ -57,6 +57,8 @@ public class ConsultaController {
 
 	@RequestMapping(value = "/detalharConsulta.do", method = RequestMethod.GET)
 	public String detalhar(Integer idConsulta, Model model) {
+		
+		System.out.println("detalhar idConsulta:" + idConsulta);
 
 		Consulta consulta = consultaRepository.recuperaConsulta(idConsulta);
 
@@ -79,6 +81,9 @@ public class ConsultaController {
 
 	@RequestMapping(value = "/listarPorPaciente.do", method = RequestMethod.POST)
 	public @ResponseBody List<Consulta> listarPorPaciente(Integer idPaciente) {
+		
+		System.out.println("listarPorPaciente idPaciente:" + idPaciente);
+		
 		return consultaRepository.listaPorPaciente(idPaciente);
 	}
 
