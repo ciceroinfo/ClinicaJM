@@ -52,6 +52,11 @@
 					<input type="button" value="Voltar" class="btn btn-warning">
 				</a>
 			</c:if>
+			
+			<springform:hidden path="id"/>
+			<springform:hidden path="dataConsulta"/>
+			<springform:hidden path="medido.id"/>
+			<springform:hidden path="paciente.id"/>
 
 		</springform:form>
 
