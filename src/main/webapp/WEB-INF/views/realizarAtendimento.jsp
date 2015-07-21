@@ -48,7 +48,7 @@
 			</c:if>
 			<c:if test="${consulta.dataAtendimento != null}">
 				<a
-					href="${pageContext.request.contextPath}/cadastroAtendimentoPasso1.do">
+					href="${pageContext.request.contextPath}/preparaCadastroAtendimento.do">
 					<input type="button" value="Voltar" class="btn btn-warning">
 				</a>
 			</c:if>
