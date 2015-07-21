@@ -2,7 +2,9 @@ package br.com.ciceroinfo.clinicajm.domain.enumeration;
 
 public enum Especialidade {
 
-	CARDIOLOGISTA("Cardiologista"), PEDIATRIA("Pediatria");
+	CARDIOLOGISTA("Cardiologista"), PEDIATRA("Pediatra"), CLINICO_GERAL(
+			"Clinico Geral"), DERMATOLOGISTA("Dermatologista"), OTORRINOLARINGOLOGISTA(
+			"Otorinolaringologista"), PNEUMOLOGISTA("Peneumologista");
 
 	private String descricao;
 
